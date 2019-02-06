@@ -1,0 +1,10 @@
+0.8.2
+cyrus-sasl-dev
+docbook-xml
+e2fsprogs-dev
+krb5-dev
+libxml2-dev
+libxslt-bin
+openldap-dev
+util-linux
+xmlto

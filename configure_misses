@@ -1,0 +1,3 @@
+Configure miss: working krb5-config... checking for krb5int_labeled_open in -lkrb5support
+Configure miss: build strict
+Configure miss: whether to build with gcov testing
