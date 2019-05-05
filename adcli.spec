@@ -6,11 +6,11 @@
 #
 Name     : adcli
 Version  : 0.8.2
-Release  : 1
+Release  : 2
 URL      : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz
 Source0  : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz
 Source99 : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz.sig
-Summary  : No detailed summary available
+Summary  : Active Directory account management tool
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: adcli-bin = %{version}-%{release}
@@ -34,7 +34,6 @@ A helper library and tools for Active Directory client operations.
 Summary: bin components for the adcli package.
 Group: Binaries
 Requires: adcli-license = %{version}-%{release}
-Requires: adcli-man = %{version}-%{release}
 
 %description bin
 bin components for the adcli package.
@@ -73,7 +72,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549493557
+export SOURCE_DATE_EPOCH=1557076163
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -85,7 +91,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1549493557
+export SOURCE_DATE_EPOCH=1557076163
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/adcli
 cp COPYING %{buildroot}/usr/share/package-licenses/adcli/COPYING
