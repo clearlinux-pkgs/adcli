@@ -6,7 +6,7 @@
 #
 Name     : adcli
 Version  : 0.8.2
-Release  : 2
+Release  : 3
 URL      : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz
 Source0  : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz
 Source99 : https://www.freedesktop.org/software/realmd/releases/adcli-0.8.2.tar.gz.sig
